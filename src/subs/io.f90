@@ -30,7 +30,8 @@ subroutine wchk_int(chk,key,nvalu,fail)
       read(chk,end=100,err=200)
    enddo
 
-   100  write(chk) '#'//kline(1:40)
+   100  backspace(chk)
+   write(chk) '#'//kline(1:40)
    write(chk) 'I '
    write(chk) nvalu
    fail=1
@@ -96,7 +97,8 @@ subroutine wchk_real(chk,key,rvalu,fail)
       read(chk,end=100,err=200)
    enddo
 
-   100  write(chk) '#'//kline(1:40)
+   100  backspace(chk)
+   write(chk) '#'//kline(1:40)
    write(chk) 'r '
    write(chk) rvalu
    fail=1
@@ -163,7 +165,8 @@ subroutine wchk_double(chk,key,dvalu,fail)
       read(chk,end=100,err=200)
    enddo
 
-   100  write(chk) '#'//kline(1:40)
+   100  backspace(chk)
+   write(chk) '#'//kline(1:40)
    write(chk) 'R '
    write(chk) dvalu
    fail=1
@@ -230,7 +233,8 @@ subroutine wchk_iarray(chk,key,x,y,z,dim,fail)
       read(chk,end=100,err=200)
    enddo
 
-   100  write(chk) '#'//kline(1:40)
+   100  backspace(chk)
+   write(chk) '#'//kline(1:40)
    write(chk) 'II'
    write(chk) x*y*z
    write(chk) (((dim(i,j,k),i=1,x),j=1,y),k=1,z)
@@ -311,7 +315,8 @@ subroutine wchk_rarray(chk,key,x,y,z,dim,fail)
       read(chk,end=100,err=200)
    enddo
 
-   100  write(chk) '#'//kline(1:40)
+   100  backspace(chk)
+   write(chk) '#'//kline(1:40)
    write(chk) 'rr'
    write(chk) x*y*z
    write(chk) (((dim(i,j,k),i=1,x),j=1,y),k=1,z)
@@ -380,7 +385,8 @@ subroutine wchk_darray(chk,key,x,y,z,dim,fail)
       read(chk,end=100,err=200)
    enddo
 
-   100  write(chk) '#'//kline(1:40)
+   100  backspace(chk)
+   write(chk) '#'//kline(1:40)
    write(chk) 'RR'
    write(chk) x*y*z
    write(chk) (((dim(i,j,k),i=1,x),j=1,y),k=1,z)
